@@ -5,7 +5,6 @@ import './menu-item.styles.scss';
 
 const MenuItem = (props) => {
     const { title, imageUrl, size, history, match, linkUrl } = props;
-    console.log('props', props);
     return (
         <div
             style={{ backgroundImage: `url(${imageUrl})` }}
