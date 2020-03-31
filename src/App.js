@@ -3,21 +3,21 @@ import { Route, Switch } from 'react-router-dom';
 
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component';
+import Header from './components/header/header.component';
+import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 
 import './App.css';
 
-const HatsPage = () => (
-  <div>
-    <h1>Hats Page</h1>
-  </div>
-)
-
 function App() {
   return (
-    <Switch>
-      <Route path="/shop" component={ShopPage} />
-      <Route path="/" component={HomePage} />
-    </Switch>
+    <div>
+      <Header />
+      <Switch>
+        <Route path="/shop" component={ShopPage} />
+        <Route path="/signin" component={SignInAndSignUpPage} />
+        <Route path="/" component={HomePage} />
+      </Switch>
+    </div>
   );
 }
 
